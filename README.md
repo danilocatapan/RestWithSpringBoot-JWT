@@ -9,7 +9,7 @@
 - Unit test.
 - Postman Collections.
 
-## Principais tecnologias utilizadas
+## Main technologies 
 - [Java](https://www.java.com/pt_BR/download/faq/develop.xml) 
 - [Springboot](https://spring.io/projects/spring-boot)
 - [JWT](https://jwt.io/)
