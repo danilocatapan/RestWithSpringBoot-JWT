@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: rest-with-springboot-jwt
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Danilo Catapan
+Implementation-Vendor-Id: br.com.catapan
+Build-Jdk: 1.8.0_241
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/rest-with-springboot-jwt
+Created-By: Maven Integration for Eclipse
+

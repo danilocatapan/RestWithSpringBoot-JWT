@@ -1,0 +1,42 @@
+version: '3.4'
+services:
+  db:
+    image: catapandanilo/mysql-rest-with-springboot-jwt
+    command: mysqld --default-authentication-plugin=mysql_native_password
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      TZ: America/Sao_Paulo
+      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      MYSQL_DATABASE: rest_with_spring_boot
+    ports:
+      - "3308:3306"
+    networks:
+      - network
+  rest-with-springboot-jwt:
+    image: catapandanilo/rest-with-springboot-jwt
+    restart: always
+    build: ./RestWithSpringBoot
+    working_dir: /RestWithSpringBoot
+    environment:
+      TZ: America/Sao_Paulo
+      SPRING_BOOT_ENVIRONMENT: Production
+    volumes:
+      - ./RestWithSpringBoot:/RestWithSpringBoot
+      - ~/.m2:/root/.m2
+    ports:
+      - "8080:8080"
+    command: mvn clean spring-boot:run
+    links:
+      - db
+    depends_on:
+      - db
+    networks:
+      - network
+networks:
+    network:
+        driver: bridge
