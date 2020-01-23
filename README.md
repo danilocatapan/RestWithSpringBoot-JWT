@@ -1,4 +1,4 @@
-# API developed in Java Spring Boot with the purpose of increasing my knowledge with JWT security.
+# API developed in Java Spring Boot with JWT security.
 
 - HATEOAS.
 > Hypermedia as the Engine of Application State (HATEOAS) is a component of the REST application architecture that distinguishes it from  other network application architectures.
